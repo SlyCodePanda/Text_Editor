@@ -8,10 +8,14 @@ from PyQt4.QtGui import QColor, QTextCharFormat, QFont, QSyntaxHighlighter
 
 
 def format(color, style=''):
-    """Return a QTextCharFormat with the given attributes.
+    """
+    Return a QTextCharFormat with the given attributes.
     """
     _color = QColor()
-    _color.setNamedColor(color)
+    if type(color) is not str:
+        _color.setRgb(color[0], color[1], color[2])
+    else:
+        _color.setNamedColor(color)
 
     _format = QTextCharFormat()
     _format.setForeground(_color)
@@ -25,15 +29,15 @@ def format(color, style=''):
 
 # Syntax styles that can be shared by all languages
 STYLES = {
-    'keyword': format('blue'),
-    'operator': format('red'),
+    'keyword': format([200, 120, 50], 'bold'),
+    'operator': format([150, 150, 150]),
     'brace': format('darkGray'),
-    'defclass': format('black', 'bold'),
-    'string': format('magenta'),
-    'string2': format('darkMagenta'),
-    'comment': format('darkGreen', 'italic'),
-    'self': format('black', 'italic'),
-    'numbers': format('brown'),
+    'defclass': format([220, 220, 255], 'bold'),
+    'string': format([20, 110, 100]),
+    'string2': format([30, 120, 110]),
+    'comment': format([128, 128, 128]),
+    'self': format([150, 85, 140], 'italic'),
+    'numbers': format([100, 150, 190]),
 }
 
 
