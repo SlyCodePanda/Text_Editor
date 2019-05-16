@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>952</width>
-    <height>756</height>
+    <width>954</width>
+    <height>758</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -484,11 +484,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <height>711</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QPlainTextEdit" name="textWindow"/>
-     </item>
-    </layout>
+    <layout class="QGridLayout" name="gridLayout"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -496,7 +492,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>952</width>
+     <width>954</width>
      <height>21</height>
     </rect>
    </property>
