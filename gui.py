@@ -48,6 +48,8 @@ def main():
 
     # Build the text editor field and load highlighter into it.
     editor = QtGui.QPlainTextEdit()
+    # Set tab width to 4 spaces.
+    editor.setTabStopWidth(editor.fontMetrics().width(' ') * 4)
     highlighter = syntaxHighlighting.PythonHighlighter(editor.document())
     GUI.ui.gridLayout.addWidget(editor)
     load_file('test.py', editor)
